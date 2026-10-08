@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -80,7 +81,15 @@ fun AktivitasPertama(modifier: Modifier, image: (Painter, Any?) -> Unit){
         }
         Box(
             modifier = Modifier.fillMaxSize()
-        )
+        ) {
+            Text(
+                stringResource(R.string.copy),
+                modifier = Modifier
+                    .align (Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
+        }
+
 
     }
 }
